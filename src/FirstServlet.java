@@ -11,7 +11,7 @@ public class FirstServlet extends javax.servlet.http.HttpServlet {
         PrintWriter pw = response.getWriter();
 
         pw.println("<h1>");
-        pw.println("FirstServlet:  Здравствуй, МИР ! ! ");
+        pw.println("FirstServlet:  Здравствуй, МИР ! ха-ха! ");
         pw.println("</h1>");
     }
 }

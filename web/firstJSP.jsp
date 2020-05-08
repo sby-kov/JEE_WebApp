@@ -18,11 +18,16 @@
 </p>
 <p>
     <%= "Посложнее..." %>
+    <%@ page import="logic.TestClass" %>
     <%
+        TestClass tc = new TestClass();
+        String myString = tc.getInfo();
         java.util.Date now = new java.util.Date();
         String nowString = "Текущая дата : " + now;
     %>
-    <%= nowString %>
+    <%= "<p>" + "импоритровано из класса: " + myString + "</p>" %>
+
+    <%= "<p>" + nowString + "</p>" %>
 </p>
 <p>
     <%= "Переменная out для вывода без '=' : " %>
@@ -36,7 +41,6 @@
         }
     %>
 </p>
-<%--
---%>
+
 </body>
 </html>
