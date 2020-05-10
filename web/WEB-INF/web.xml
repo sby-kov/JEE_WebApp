@@ -11,4 +11,12 @@
         <servlet-name>FirstServlet</servlet-name>
         <url-pattern>/ServCall</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>FirstJSP</servlet-name>
+        <jsp-file>/firstJSP.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FirstJSP</servlet-name>
+        <url-pattern>/CallJSP</url-pattern>
+    </servlet-mapping>
 </web-app>
