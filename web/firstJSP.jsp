@@ -18,15 +18,18 @@
 </p>
 <p>
     <%= "<h3>" + "Посложнее..." + "</h3>" %>
-    <%@ page import="logic.TestClass" %>
+    <%@ page import="logic.TestClass, java.util.Date" %>
     <%
         TestClass tc = new TestClass();
         String myString = tc.getInfo();
-        java.util.Date now = new java.util.Date();
-        String nowString = "Текущая дата : " + now;
+        //java.util.Date now = new java.util.Date();
+        //String nowString = "Текущая дата : " + now;
     %>
     <%= "<p>" + "импоритровано из класса: " + myString + "</p>" %>
-
+    <%
+        Date now = new Date();
+        String nowString = " и текущая дата из java.util: " + now;
+    %>
     <%= "<p>" + nowString + "</p>" %>
 </p>
 <p>
