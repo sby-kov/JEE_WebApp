@@ -41,6 +41,15 @@
         }
     %>
 </p>
+<p>
+    <%= "<h3>" + "<p>" + "Параметры запроса : " + "</p>" + "</h3>" %>
+    <%
+        // считываем параметры из request
+        String name = request.getParameter("name");
+        String surname = request.getParameter("surname");
 
+        out.println("<p> Привет, " + name + " " + surname+ " </p>");
+    %>
+</p>
 </body>
 </html>
