@@ -1,3 +1,4 @@
+import javax.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -20,5 +21,16 @@ public class FirstServlet extends javax.servlet.http.HttpServlet {
         pw.println("FirstServlet:  Здравствуй, МИР ! ха-ха! ");
         pw.println("<p>" + mess + "</p>");
         pw.println("</h1>");
+        // при редиректе и форвардинге всё, что делается в doGet до них, юзер не видит
+        // на внешний сайт
+        //response.sendRedirect("https://translate.google.ru/");
+        // внутри приложения
+        //response.sendRedirect("/firstJSP.jsp");
+        //response.sendRedirect("/CallJSP");  // и так можно(Web.xml)
+
+        // и форвардиниг !только внутри сервера!
+        RequestDispatcher rd = request.getRequestDispatcher("/CallJSP"); //("/firstJSP.jsp");
+        rd.forward(request, response);
+
     }
 }
