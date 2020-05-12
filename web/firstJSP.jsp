@@ -30,6 +30,22 @@
     <%= "<p>" + nowString + "</p>" %>
 </p>
 <p>
+    <%= "<h3>" + "Session: корзина cart..." + "</h3>" %>
+    <%@ page import="logic.TestClass" %>
+    <%
+/*      для корзины создаем класс Cart в пакете Utils
+        TestClass tc = new TestClass();
+        String myString = tc.getInfo();
+        java.util.Date now = new java.util.Date();
+        String nowString = "Текущая дата : " + now;
+*/
+    %>
+    <%= "<p>" + "импоритровано из класса: " + myString + "</p>" %>
+
+    <%= "<p>" + nowString + "</p>" %>
+</p>
+<%-- пока закоментим
+<p>
     <%= "<h3>" + "<p>" + "Переменная out для вывода без '=' : " + "</p>" + "</h3>" %>
     <%
         // вкрапления java в код html
@@ -41,6 +57,6 @@
         }
     %>
 </p>
-
+--%>
 </body>
 </html>
