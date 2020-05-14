@@ -12,6 +12,16 @@ public class FirstServlet extends javax.servlet.http.HttpServlet {
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         // сессия. сделаем счетчик
         HttpSession session = request.getSession();
+        // набросок авторизации
+        String user = (String) session.getAttribute("current_user");
+        if (user == null) {
+            // response для анонимного пользователя
+            // авторизация
+            // регистрация
+            // session.setAttrubute("current_user", ID);
+        } else {
+            // response для авторизованнного пользователя
+        }
         // сессия. делаем корзину
         Cart cart = (Cart) session.getAttribute("cart");
         // пар-ры корзины из url запроса
